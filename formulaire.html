@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulaire d'inscription</title>
+</head>
+<body>
+  <h1>Formulaire d'inscription</h1>
+  <p>Veuillez-compléter le formulaire suivant :</p>
+  <div>
+    <p>Les champs marqués d'un <span style="color: red">*</span> sont requis.</p>
+  </div>
+  <div class="container">
+    <form>
+      <!-- Sexe -->
+      <label for="gender">Sexe</label><br>
+      <input type="radio" id="male" name="gender" value="male">
+      <lavel for="male">Monsieur</lavel>
+      <input type="radio" id="female" name="gender" value="female">
+      <lavel for="female">Madame</lavel>   
+      <input type="radio" id="other" name="gender" value="other">
+      <lavel for="other">Autre</lavel><br>   
+      <!-- Sex end -->
+      <label for="lname">Votre nom</label>
+      <input type="text" id="lname" name="lastname" placeholder="Nom" required>
+      <label for="fname">Votre prénom</label>
+      <input type="text" id="fname" name="firstname" placeholder="Prénom" required>
+      <label for="phone">Votre numéro téléphone</label>
+      <input type="tel" id="phone" name="phone" placeholder="0033123456789" minlength="12" maxlength="15" required>
+      <label for="email">Votre e-mail</label>
+      <input type="email" id="email" name="email" placeholder="E-mail" required>
+      <label for="adresse">Votre adresse</label>
+      <input type="number" id="adresse" name="adresse" placeholder="Numéro et rue" minlength="9" maxlength="14" pattern="[0-9]{1-3}-[a-z]{1}-[0-9]{3}" required>
+      
+      <label for="zip">Votre code postal</label>
+      <input type="text" id="zip" name="zip" minlength="5" maxlength="5" placeholder="Code postal" pattern="\d+" required>
+
+      <label for="city">Votre ville</label>
+      <input type="text" id="city" name="city" placeholder="Ville" required>
+
+      <label for="job">Votre métier exercé</label>
+      <select name="job" id="job-select" required>
+        <option value="">Choissiez votre métier</option>
+        <option value="marketing">Marketing</option>
+        <option value="devfull">Développeur fullstack</option>
+        <option value="devfront">Développeur front-end</option>
+        <option value="devback">Développeur back-end</option>
+        <option value="graphist">Graphist</option>
+        <option value="other">Autre</option>
+      </select>
+      <label for="bday">Votre date de naissance</label>
+      <input type="date" id="bday" name="birthdate" placeholder="Your birthdate.." min="1900-01-01" max="2021-12-08" required> 
+
+      <label for="age">Votre age</label>
+      <input type="text" id="age" name="age" placeholder="Age" minlength="1" maxlength="3" pattern="\d+" required> 
+      
+      <label for="bcountry">Votre pays de naissance</label>
+      <input type="text" id="bcountry" name="bcountry" placeholder="Pays de naissance" required>
+
+      <select name="nationality" id="nationality" required>
+        <option value="">Choissiez votre nationalité</option>
+        <option value="French">Francaise</option>
+        <option value="German">Allemande</option>
+        <option value="American">Américaine</option>
+        <option value="English">Anglaise</option>
+        <option value="Russian">Russe</option>
+        <option value="other">Autre</option>
+      </select>
+
+      <label for="socialnumber">Votre numéro de sécurité social</label>
+      <input type="number" id="socialnumber" name="socialnumber" minlength="13" maxlength="13" placeholder="Numéro de sécurité social" pattern="[0-9]{1} [0-9]{2} [0-9]{2} [0-9]{2} [0-9]{3} [0-9]{3}" required>
+
+      <label for="passnumber">Votre numéro de passport</label>
+      <input type="number" id="passnumber" name="passnumber" minlength="5" maxlength="5" placeholder="Numéro de passport" pattern="" required>
+
+      <label for="passdatedelivery">La date de délivrance de votre passport</label>
+      <input type="date" id="passdate" name="passdatedelivery" min="2012-01-01" max="2021-12-08" placeholder="Date de délivrance de votre passport" required>
+
+      <label for="passdatevalidity">La date de validité de votre passport</label>
+      <input type="date" id="passvalidity" name="passdatevalidity" min="2021-01-01" placeholder="Date de validité de votre passport" required>
+
+      <!-- <label for="subject">Subject</label>
+      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea> -->
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</body>
+</html>
