@@ -20,7 +20,7 @@
       <!-- Sexe -->
 
       <label for="phone">Votre numéro téléphone</label>
-      <input type="tel" id="xx" name="phone" placeholder="0033123456789" pattern="^(0{2}|\+{1})[1-9]" title="Le champ doit commencer par 00 + indicatif pays et contenir entre 12 et 15 chiffres." required>
+      <input type="tel" id="phone" name="phone" placeholder="0033123456789" pattern="^(0{2}|\+{1})[1-9]" title="Le champ doit commencer par 00 + indicatif pays et contenir entre 12 et 15 chiffres." required>
 
 
       <label for="gender">Sexe</label><br>
@@ -31,9 +31,9 @@
       <input type="radio" id="other" name="gender" value="other">
       <lavel for="other">Autre</lavel><br>   
       <label for="lname">Votre nom</label>
-      <input type="text" id="lname" name="lastname" placeholder="Nom" pattern="[A-Za-z]{1,30}" title="Le champ doit contenir entre 1 et 30 caractères de texte." required>
+      <input type="text" id="lname" name="lastname" placeholder="Nom" pattern="[A-Za-zÀ-ÿ]{1,30}" title="Le champ doit contenir entre 1 et 30 caractères de texte." required>
       <label for="fname">Votre prénom</label>
-      <input type="text" id="fname" name="firstname" placeholder="Prénom" pattern="[A-Za-z]{1,30}" title="Le champ doit contenir entre 1 et 30 caractères de texte." required>
+      <input type="text" id="fname" name="firstname" placeholder="Prénom" pattern="[A-Za-zÀ-ÿ]{1,30}" title="Le champ doit contenir entre 1 et 30 caractères de texte." required>
       <label for="email">Votre e-mail</label>
       <input type="email" id="email" name="email" placeholder="E-mail" required>
       <div>
@@ -41,12 +41,12 @@
         <label for="streetnumber">Numéro</label>
         <input type="text" id="streetnumber" name="streetnumber" placeholder="Numéro" pattern="^[1-9]\d*+[a-z]?$" required>
         <label for="street">Rue</label>
-        <input type="text" id="street" name="street" placeholder="Rue" required>      
+        <input type="text" id="street" name="street" pattern="[A-Za-zÀ-ÿ]{1,30}" placeholder="Rue" required>      
       </div> 
       <label for="zip">Votre code postal</label>
       <input type="text" id="zip" name="zip" minlength="3" maxlength="5" placeholder="Code postal" pattern="\d+$|^[a-zA-Z]{2}+[0-9]{1,2}$" required>
       <label for="city">Votre ville</label>
-      <input type="text" id="city" name="city" placeholder="Ville" required>
+      <input type="text" id="city" name="city" pattern="[A-Za-zÀ-ÿ]{1,30}" placeholder="Ville" required>
       <label for="job">Votre métier exercé</label>
       <select name="job" id="job-select" required>
         <option value="">Choissiez votre métier</option>
@@ -62,7 +62,7 @@
       <label for="age">Votre age</label>
       <input type="text" id="age" name="age" placeholder="Age" min="1" max="110" pattern="\d+" required> 
       <label for="bcountry">Votre pays de naissance</label>
-      <input type="text" id="bcountry" name="bcountry" placeholder="Pays de naissance" required>
+      <input type="text" id="bcountry" name="bcountry" pattern="[A-Za-zÀ-ÿ]{1,30}" placeholder="Pays de naissance" required>
       <select name="nationality" id="nationality" required>
         <option value="">Choissiez votre nationalité</option>
         <option value="French">Francaise</option>
