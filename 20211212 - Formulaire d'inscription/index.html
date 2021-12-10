@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulaire d'inscription</title>
 </head>
-<header>
-  <img src="img/Logo.png" alt="Logo Agency XY"/>
-</header>
 <body>
+  <header>
+    <img src="img/Logo.png" alt="Logo Agency XY"/>
+  </header>
   <h1>Formulaire d'inscription</h1>
   <p>Veuillez-compléter le formulaire suivant :</p>
   <div>
@@ -17,38 +17,38 @@
   </div>
   <section>
     <form>
-      <!-- Sexe -->
-
+      <!-- Phone number with country indicator 
       <label for="phone">Votre numéro téléphone</label>
-      <input type="tel" id="phone" name="phone" placeholder="0033123456789" pattern="^(0{2}|\+{1})[1-9]" title="Le champ doit commencer par 00 + indicatif pays et contenir entre 12 et 15 chiffres." required>
-
-
-      <label for="gender">Sexe</label><br>
-      <input type="radio" id="male" name="gender" value="male">
-      <lavel for="male">Monsieur</lavel>
-      <input type="radio" id="female" name="gender" value="female">
-      <lavel for="female">Madame</lavel>   
-      <input type="radio" id="other" name="gender" value="other">
-      <lavel for="other">Autre</lavel><br>   
+      <input type="tel" id="phone" name="phone" placeholder="0033123456789" pattern="^(0{2}|\+{1})[1-9]+" title="Le champ doit commencer par 00 + indicatif pays et contenir entre 12 et 15 chiffres." required>
+      -->
+      <div>
+        <p>Sexe</p>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Monsieur</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Madame</label>   
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Autre</label><br>   
+      </div>
       <label for="lname">Votre nom</label>
       <input type="text" id="lname" name="lastname" placeholder="Nom" pattern="[A-Za-zÀ-ÿ]{1,30}" title="Le champ doit contenir entre 1 et 30 caractères de texte." required>
       <label for="fname">Votre prénom</label>
       <input type="text" id="fname" name="firstname" placeholder="Prénom" pattern="[A-Za-zÀ-ÿ]{1,30}" title="Le champ doit contenir entre 1 et 30 caractères de texte." required>
       <label for="email">Votre e-mail</label>
-      <input type="email" id="email" name="email" placeholder="E-mail" required>
+      <input type="email" id="email" name="email" placeholder="E-mail" title="Le champ doit contenir une adresse email valide avec @ et ." required>
       <div>
         <p>Votre adresse</p>
         <label for="streetnumber">Numéro</label>
-        <input type="text" id="streetnumber" name="streetnumber" placeholder="Numéro" pattern="^[1-9]\d*+[a-z]?$" required>
+        <input type="text" id="streetnumber" name="streetnumber" placeholder="Numéro" pattern="^[0-9]+[a-z]?$" title="Le champ doit contenir un chiffre et peut contenir une lettre." required>
         <label for="street">Rue</label>
-        <input type="text" id="street" name="street" pattern="[A-Za-zÀ-ÿ]{1,30}" placeholder="Rue" required>      
+        <input type="text" id="street" name="street" pattern="[A-Za-zÀ-ÿ]{1,30}" placeholder="Rue" title="Le champ doit contenir entre 1 et 30 caractères de texte." required>      
       </div> 
       <label for="zip">Votre code postal</label>
-      <input type="text" id="zip" name="zip" minlength="3" maxlength="5" placeholder="Code postal" pattern="\d+$|^[a-zA-Z]{2}+[0-9]{1,2}$" required>
+      <input type="text" id="zip" name="zip" minlength="3" maxlength="5" placeholder="Code postal" pattern="\d{3,5}|^[a-zA-Z]{2}[0-9]{1,2}$" title="Le champ doit contenir 5 chiffres ou 2 lettres suivies par 1 ou 2 chiffres (UK)." required>
       <label for="city">Votre ville</label>
-      <input type="text" id="city" name="city" pattern="[A-Za-zÀ-ÿ]{1,30}" placeholder="Ville" required>
+      <input type="text" id="city" name="city" pattern="[A-Za-zÀ-ÿ]{1,30}" placeholder="Ville" title="Le champ doit contenir entre 1 et 30 caractères de texte." required>
       <label for="job">Votre métier exercé</label>
-      <select name="job" id="job-select" required>
+      <select name="job" id="job" required>
         <option value="">Choissiez votre métier</option>
         <option value="marketing">Marketing</option>
         <option value="devfull">Développeur fullstack</option>
@@ -58,11 +58,11 @@
         <option value="other">Autre</option>
       </select>
       <label for="bday">Votre date de naissance</label>
-      <input type="date" id="bday" name="birthdate" min="1900-01-01" max="2021-12-08" required> 
+      <input type="date" id="bday" name="birthdate" min="1900-01-01" max="2021-12-08" title="Votre date de naissance doit être après 01/01/1900." required> 
       <label for="age">Votre age</label>
-      <input type="text" id="age" name="age" placeholder="Age" min="1" max="110" pattern="\d+" required> 
+      <input type="number" id="age" name="age" placeholder="Age" min="1" max="110" title="Votre âge doit être entre 1 et 110." required>
       <label for="bcountry">Votre pays de naissance</label>
-      <input type="text" id="bcountry" name="bcountry" pattern="[A-Za-zÀ-ÿ]{1,30}" placeholder="Pays de naissance" required>
+      <input type="text" id="bcountry" name="bcountry" pattern="[A-Za-zÀ-ÿ]{1,30}" placeholder="Pays de naissance" title="Le champ doit contenir entre 1 et 30 caractères de texte." required>
       <select name="nationality" id="nationality" required>
         <option value="">Choissiez votre nationalité</option>
         <option value="French">Francaise</option>
@@ -73,13 +73,13 @@
         <option value="other">Autre</option>
       </select>
       <label for="socialnumber">Votre numéro de sécurité social</label>
-      <input type="text" id="socialnumber" name="socialnumber" minlength="13" maxlength="13" placeholder="Numéro de sécurité social" pattern="\d+" required>
+      <input type="text" id="socialnumber" name="socialnumber" minlength="13" maxlength="13" placeholder="Numéro de sécurité social" pattern="\d+" title="Le champ doit contenir 13 chiffres sans espaces." required>
       <label for="passnumber">Votre numéro de passport</label>
-      <input type="text" id="passnumber" name="passnumber" minlength="5" maxlength="10" placeholder="Numéro de passport" required>
+      <input type="text" id="passnumber" name="passnumber" minlength="5" maxlength="10" placeholder="Numéro de passport" title="Le champ doit contenir entre 5 et 10 caractères de texte." required>
       <label for="passdatedelivery">La date de délivrance de votre passport</label>
-      <input type="date" id="passdate" name="passdatedelivery" min="2011-12-08" max="2021-12-08" required>
+      <input type="date" id="passdatedelivery" name="passdatedelivery" min="2011-12-08" max="2021-12-08" title="La date de délivrance ne doit pas dépasser 10 ans." required>
       <label for="passdatevalidity">La date de validité de votre passport</label>
-      <input type="date" id="passvalidity" name="passdatevalidity" min="2022-01-01" required>
+      <input type="date" id="passdatevalidity" name="passdatevalidity" min="2022-01-01" title="La date de validité ne doit pas être inférieur à 1 mois." required>
       <input type="submit" value="Submit">
     </form>
     <article>
