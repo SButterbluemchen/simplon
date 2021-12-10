@@ -75,7 +75,7 @@
       <label for="socialnumber">Votre numéro de sécurité social</label>
       <input type="text" id="socialnumber" name="socialnumber" minlength="13" maxlength="13" placeholder="Numéro de sécurité social" pattern="\d+" title="Le champ doit contenir 13 chiffres sans espaces." required>
       <label for="passnumber">Votre numéro de passport</label>
-      <input type="text" id="passnumber" name="passnumber" minlength="5" maxlength="10" placeholder="Numéro de passport" title="Le champ doit contenir entre 5 et 10 caractères de texte." required>
+      <input type="text" id="passnumber" name="passnumber" minlength="5" maxlength="10" placeholder="Numéro de passport" pattern="[a-zA-Z0-9]+" title="Le champ doit contenir entre 5 et 10 caractères de texte." required>
       <label for="passdatedelivery">La date de délivrance de votre passport</label>
       <input type="date" id="passdatedelivery" name="passdatedelivery" min="2011-12-08" max="2021-12-08" title="La date de délivrance ne doit pas dépasser 10 ans." required>
       <label for="passdatevalidity">La date de validité de votre passport</label>
